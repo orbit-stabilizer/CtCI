@@ -1,7 +1,7 @@
 import pytest
 
-# Time Complexity: O(n).
-# Space Complexity: O(n).
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 def is_unique_a(string: str) -> bool:
     """
     Assumptions:
@@ -49,11 +49,11 @@ class TestIsUniqueA():
         assert is_unique_a(string) is False
 
 
-# Time Complexity: O(n*log(n)) due to sorted function.
-# Space Complexity: O(n) due to creating new string.
+# Time Complexity: O(n*log(n)) due to sorted function
+# Space Complexity: O(n) due to creating new string
 # Some may argue that we are using an additional data structure since sorted
-# returns a list. 
-# For those people, I'd say have fun with your O(n^2) algorithm.
+# returns a list
+# To those people, I'd say have fun with your O(n^2) algorithm
 def is_unique_b(string: str) -> bool:
     """
     Returns True if given string contains all unique characters, else False.

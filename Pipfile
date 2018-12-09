@@ -9,6 +9,8 @@ verify_ssl = true
 mypy = "*"
 unittest = "*"
 pytest = "*"
+requests = "*"
+bs4 = "*"
 
 [requires]
 python_version = "3.7"

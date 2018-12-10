@@ -1,12 +1,9 @@
 import pytest
 
+from utils import Node
+
 # Time Complexity: O(n)
 # Space Complexity: O(1)
-class Node():
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
 def kth_to_last(head: Node, k: int) -> Node:
     """
     Assumptions:

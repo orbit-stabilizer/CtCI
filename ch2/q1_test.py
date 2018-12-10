@@ -1,10 +1,7 @@
 import pytest
 
-class Node():
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-    
+from utils import Node
+
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 def remove_dups(head: Node) -> None:

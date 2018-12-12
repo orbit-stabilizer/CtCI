@@ -3,6 +3,7 @@ from typing import List, Optional
 
 from utils import Node, LinkedList
 
+
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 def partition(head: Node, p_val: int) -> None:
@@ -21,17 +22,17 @@ def partition(head: Node, p_val: int) -> None:
             vals_less_than_p_val.append(curr.data)
         else:
             vals_greater_than_p_val.append(curr.data)
-        
+
         curr = curr.next
-    
+
     curr = head
     while curr:
         if vals_less_than_p_val:
             curr.data = vals_less_than_p_val.pop()
         else:
             curr.data = vals_greater_than_p_val.pop()
-        
-        curr = curr.next
+
+        curr = curr.nex
 
 
 class TestPartition():
@@ -57,4 +58,3 @@ class TestPartition():
         partition(head, 3)
 
         assert head.data != 5
-    

@@ -1,4 +1,4 @@
-import pytest
+
 
 # Time Complexity: O(n) - Depends on implementation of in
 # Space Complexity: O(n) - Depends of implementation of in
@@ -25,25 +25,25 @@ class TestStringRotation():
         s2 = 'tationro'
 
         assert string_rotation(s1, s2) is True
-    
+
     def test_is_not_rotation(self) -> None:
         s1 = 'rotation'
         s2 = 'tationor'
 
         assert string_rotation(s1, s2) is False
-    
+
     def test_is_rotation_2(self) -> None:
         s1 = 'lyhigh'
         s2 = 'highly'
 
         assert string_rotation(s1, s2) is True
-    
+
     def test_is_not_rotation_2(self) -> None:
         s1 = 'noooooo'
         s2 = 'nooooo'
 
         assert string_rotation(s1, s2) is False
-    
+
     def test_is_rotation_numbers(self) -> None:
         s1 = '1234567890'
         s2 = '4567890123'

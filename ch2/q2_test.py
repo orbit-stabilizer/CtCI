@@ -2,6 +2,7 @@ import pytest
 
 from utils import Node
 
+
 # Time Complexity: O(n)
 # Space Complexity: O(1)
 def kth_to_last(head: Node, k: int) -> Node:
@@ -19,11 +20,11 @@ def kth_to_last(head: Node, k: int) -> Node:
     while i < k:
         lead = lead.next
         i += 1
-    
+
     while lead.next:
         lead = lead.next
         follow = follow.next
-    
+
     return follow
 
 
@@ -42,7 +43,7 @@ class TestKthToLast():
         head.next.next.next.next = Node(5)
 
         return head
-    
+
     @pytest.fixture
     def linked_list_seven(self):
         """"
@@ -68,17 +69,17 @@ class TestKthToLast():
         k = 2
 
         assert kth_to_last(linked_list_five, k).data == 3
-    
+
     def test_five_large_k(self, linked_list_five):
         k = 4
 
         assert kth_to_last(linked_list_five, k).data == 1
-    
+
     def test_seven_small_k(self, linked_list_seven):
         k = 3
 
         assert kth_to_last(linked_list_seven, k).data is False
-    
+
     def test_seven_large_k(self, linked_list_seven):
         k = 6
 

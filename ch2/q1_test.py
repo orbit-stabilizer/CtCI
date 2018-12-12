@@ -1,6 +1,5 @@
-import pytest
-
 from utils import Node
+
 
 # Time Complexity: O(n)
 # Space Complexity: O(n)
@@ -11,8 +10,8 @@ def remove_dups(head: Node) -> None:
     """
     data_collected: dict = dict()
 
-    prev: Node = head 
-    curr: Node = head 
+    prev: Node = head
+    curr: Node = head
     while curr:
         if curr.data in data_collected:
             prev.next = curr.next
@@ -22,7 +21,7 @@ def remove_dups(head: Node) -> None:
             prev = curr
 
         curr = curr.next
-    
+
 
 class TestRemoveDups():
 
@@ -32,7 +31,7 @@ class TestRemoveDups():
 
         remove_dups(head)
         assert head.next is None
-    
+
     def test_no_duplicates(self) -> None:
         head = Node(1)
         head.next = Node(2)
@@ -48,7 +47,7 @@ class TestRemoveDups():
             curr = curr.next
 
         assert i == 5
-    
+
     def test_many_duplicates(self) -> None:
         head = Node('hah')
         head.next = Node('nah')
@@ -62,7 +61,7 @@ class TestRemoveDups():
             i += 1
             curr = curr.next
 
-        assert i ==  2
+        assert i == 2
 
     def test_only_head(self) -> None:
         head = Node(True)
@@ -71,14 +70,13 @@ class TestRemoveDups():
 
         assert head.next is None
         assert head.data is True
-    
+
     def test_duplicate_at_end(self) -> None:
         head = Node('a')
         head.next = Node('A')
         head.next.next = Node('B')
         head.next.next.next = Node('c')
         head.next.next.next.next = Node('a')
-
 
         assert head.next.next.next.next.data is 'a'
         remove_dups(head)

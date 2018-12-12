@@ -2,6 +2,7 @@ import pytest
 
 from utils import Node, LinkedList
 
+
 # Time Complexity: O(1)
 # Space Complexity: O(1)
 # More accurate to say O(data)
@@ -35,22 +36,22 @@ class TestDeleteMiddleNode():
         linked_list.append(Node(False))
 
         return head
-    
+
     def test_remove_34_from_linked_list(self, head):
         delete_middle_node(head.next.next.next)
 
         assert head.next.next.next.data == '0293148'
-    
+
     def test_remove_why_from_linked_list(self, head):
         delete_middle_node(head.next.next)
 
         assert head.next.next.data == '34'
-    
+
     def test_remove_true_from_linked_list(self, head):
         delete_middle_node(head.next.next.next.next.next.next)
 
         assert head.next.next.next.next.next.next.data is False
-    
+
     def test_remove_hello_from_linked_list(self, head):
         delete_middle_node(head.next)
 
@@ -59,6 +60,6 @@ class TestDeleteMiddleNode():
         assert head.next.next.data == '34'
         assert head.next.next.next.data == '0293148'
         assert head.next.next.next.next.data == 2034820
-        assert head.next.next.next.next.next.data == True
-        assert head.next.next.next.next.next.next.data == False
+        assert head.next.next.next.next.next.data is True
+        assert head.next.next.next.next.next.next.data is False
         assert head.next.next.next.next.next.next.next is None

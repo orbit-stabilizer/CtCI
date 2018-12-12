@@ -1,11 +1,11 @@
-import pytest
+
 
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 def URLify(s: str) -> str:
     """
     Note:
-        This is slightly different from the CtCI question. 
+        This is slightly different from the CtCI question.
     Returns:
         A string stripped of all leading and trailing spaces, with all
         non-leading and non-trailing spaces replaced with '%20'.
@@ -20,12 +20,12 @@ class TestURLify():
         mt_str = ''
 
         assert URLify(mt_str) == ''
-    
+
     def test_blank_string(self) -> None:
         blank_str = ' '
 
         assert URLify(blank_str) == ''
-    
+
     def test_regular_string(self) -> None:
         s = 'Dr John Wayne'
         s_urlified = 'Dr%20John%20Wayne'

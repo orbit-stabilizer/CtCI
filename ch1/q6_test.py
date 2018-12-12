@@ -1,5 +1,5 @@
 from typing import List
-import pytest
+
 
 # Time Complexity: O(n)
 # Space Complexity: O(n)
@@ -27,7 +27,7 @@ def string_compression(s: str) -> str:
         else:
             output.append(s[i])
             output.append(str(count))
-    
+
     return ''.join(output) if len(output) < len(s) else s
 
 
@@ -38,12 +38,12 @@ class TestStringCompression():
         compressed_str = 'a8b8i8l8a1l1s1k1d1j1f1'
 
         assert string_compression(long_str) == compressed_str
-    
+
     def test_return_original_str(self) -> None:
         orig_str = 'abcdefgh'
 
         assert string_compression(orig_str) == orig_str
-    
+
     def test_uppercase_return_orignal_str(self) -> None:
         orig_str = 'ABCabcABCabc'
 

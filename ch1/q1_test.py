@@ -1,4 +1,4 @@
-import pytest
+
 
 # Time Complexity: O(n)
 # Space Complexity: O(n)
@@ -10,19 +10,19 @@ def is_unique_a(string: str) -> bool:
     Returns:
         True if given string contains all unique characters, else False.
     """
-    chars:dict = dict()
+    chars: dict = dict()
 
     for char in string:
         if char in chars:
             return False
         else:
             chars[char] = 1
-    
+
     return True
 
 
 class TestIsUniqueA():
-    
+
     def test_empty_string(self) -> None:
         mt_str = ''
 
@@ -65,8 +65,9 @@ def is_unique_b(string: str) -> bool:
     for i in range(len(sorted_string) - 1):
         if sorted_string[i] == sorted_string[i+1]:
             return False
-    
+
     return True
+
 
 class TestIsUniqueB():
     def test_empty_string(self) -> None:

@@ -32,7 +32,7 @@ def partition(head: Node, p_val: int) -> None:
         else:
             curr.data = vals_greater_than_p_val.pop()
 
-        curr = curr.nex
+        curr = curr.next
 
 
 class TestPartition():
@@ -58,3 +58,10 @@ class TestPartition():
         partition(head, 3)
 
         assert head.data != 5
+
+    def test_simple_2(self, head):
+        assert head.next.data == 4
+
+        partition(head, 1)
+
+        assert head.data == 1

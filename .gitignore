@@ -1,2 +1,11 @@
-.mypy_cache
+# coverage.py
+.coverage
+
+# coverage.py - nicely formatted output
+htmlcov
+
+# pytest.py
 .pytest_cache
+
+# vscode settings
+.vscode

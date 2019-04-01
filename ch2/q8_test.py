@@ -8,8 +8,7 @@ from utils import Node
 def loop_detection(head: Node) -> Union[Node, bool]:
     """
     Returns:
-        If there is a loop, returns the node at the start of the loop
-        Else returns False
+        Node at the start of the loop, if there is a loop, else False.
     """
     nodes: set = set()
     node: Optional[Node] = head
@@ -32,7 +31,7 @@ class TestLoopDetection():
         head.next.next.next.next = loop_node
 
         assert loop_detection(head) is loop_node
-    
+
     def test_simple_case_no_loop(self):
         head = Node(1, Node(2, Node(3, Node(4, Node(5)))))
 

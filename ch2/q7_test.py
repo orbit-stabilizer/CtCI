@@ -8,8 +8,8 @@ from utils import Node
 def intersection(head_1: Node, head_2: Node) -> Union[Node, bool]:
     """
     Returns:
-        False if linked lists do not intersect
-        The first intersection Node if they intersect (by reference, not value)
+        False if linked lists do not intersect (by reference, not value), else
+        the first intersection Node (by reference, not value).
     """
     node: Optional[Node] = head_1
     nodes: set = set()
